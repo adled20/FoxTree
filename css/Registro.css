@@ -1,0 +1,109 @@
+:root{
+--naranja:#f1511b;
+--morado:#5e17eb;
+--rojo:#d10e36;
+--negro:#1a1a1a;
+}
+
+body{
+    display: flex;
+}
+.Seccion{
+    height: 100dvh;
+    width: 50%;
+    display: flex;
+   
+}
+.border-naranja{
+ border-color: var(--naranja) !important;
+  
+}
+.border-morado{
+    border-color: var(--morado) !important;
+     
+   }
+.btn-morado{
+    background-color: var(--morado);
+}
+
+.formulario{
+    width: 500px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.bot{
+    
+    color: #ffff;
+    height: 40px;
+    box-shadow: none;
+    border-radius: 15px;
+   border: none;
+   padding-left: 40px;
+   padding-right: 40px;
+    background-color: var(--morado);
+    transition: .5s ease;
+}
+
+.carga{
+    width: 100%;
+    height: 100px;
+}
+.check.icon {
+    color: var(--naranja);
+    position: absolute;
+    margin-left: 3px;
+    margin-top: 4px;
+    width: 100px;
+    height: 50px;
+    border-bottom: solid 15px currentColor;
+    border-left: solid 15px currentColor;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  
+  
+.loader {
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 3px;
+    background: 
+      radial-gradient(farthest-side,var(--morado) 95%,#0000) 50% 0/12px 12px no-repeat,
+      radial-gradient(farthest-side,#0000 calc(100% - 5px),var(--morado) calc(100% - 4px)) content-box;
+    animation: l6 2s infinite ;
+  }
+  @keyframes l6 {to{transform: rotate(1turn)}}
+  
+.botlog{
+    
+    color: #ffff;
+    height: 40px;
+    box-shadow: none;
+    border-radius: 15px;
+   border: none;
+   padding-left: 40px;
+   padding-right: 40px;
+    background-color: var(--naranja);
+    transition: .5s ease;
+}
+.botlog:focus{
+    
+    background-color: #ec8d59;
+}
+.bot:focus{
+    
+    background-color: #c5aafa;
+}
+
+#fondo{
+ width: 50%;
+ background-color: #f1511b;
+ display: flex;
+}
+
+#imagen{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+  
+}
