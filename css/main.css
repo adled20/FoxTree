@@ -1,0 +1,117 @@
+:root{
+    --naranja:#f1511b;
+    --morado:#5e17eb;
+    --rojo:#d10e36;
+    --negro:#1a1a1a;
+    }
+
+nav{
+    color: #ffff;
+    background-color: var(--negro);
+}
+.contenedor{
+    height: 100dvh;
+   
+}
+.lateral{
+    
+   width: 20%;
+   height: 100dvh;
+   background-color: var(--negro);
+}
+
+.sect{
+
+    width: 100%;
+}
+#entrar{
+    width: 70%;
+   
+   
+}
+#lateralderecho{
+width: 30%;
+
+
+}
+.total{
+    width: 40% !important;
+}
+
+.tipo{
+    font-size: 30px;
+    background-color: #fff;
+    border-style: none;
+    
+}
+.botlog{
+    
+    color: #ffff;
+    height: 40px;
+    box-shadow: none;
+    border-radius: 15px;
+   border: none;
+   padding-left: 40px;
+   padding-right: 40px;
+    background-color: var(--morado);
+    transition: .5s ease;
+}
+.botfoto{
+    font-size: 50px;
+    color: var(--morado);
+    box-shadow: none;
+    border-radius: 10px;
+   
+  padding: 20px;
+    background-color: #fff;
+    transition: .5s ease;
+}
+
+
+.loader {
+    width: 30px;
+    aspect-ratio: 2;
+    --_g: no-repeat radial-gradient(circle closest-side,#fff 90%,#0000); /* Cambié #000 a #fff para blanco */
+    background: 
+      var(--_g) 0%   50%,
+      var(--_g) 50%  50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100%/3) 50%;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {
+      20%{background-position:0%   0%, 50%  50%,100%  50%}
+      40%{background-position:0% 100%, 50%   0%,100%  50%}
+      60%{background-position:0%  50%, 50% 100%,100%   0%}
+      80%{background-position:0%  50%, 50%  50%,100% 100%}
+  }
+#grafica{
+   width: 570px;
+   height: 570px;
+   
+}
+.contbotones{
+    width: 570px;
+}
+.botones{
+    color: #ffff;
+    height: 50px;
+    box-shadow: none;
+    border-radius: 15px;
+    font-size: 17px;
+   border: none;
+   padding-left: 70px;
+   padding-right: 70px;
+    background-color: var(--morado);
+}
+.bot, .formu{
+    width: 100%;
+}
+.border-morado{
+    border-color: var(--morado) !important;
+     
+   }
+ #borde{
+   width: 100%;
+   border: 5px solid var(--morado);
+ }
