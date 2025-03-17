@@ -5,10 +5,19 @@ const UID = sessionStorage.getItem("UID")
 var tipo = "Gastos";
 
 
-ga.addEventListener("click", () => {
+ga.addEventListener("click", async () => {
     tipo = "Gastos";
+    const datos = await EncontrarRegistro();
     DibujarGrafica(datos)
    
+});
+
+Ingre.addEventListener("click", async () => {
+  console.log("Estoy aqui")
+  tipo = "Ingresos";
+    const datos = await EncontrarRegistro();
+    DibujarGrafica(datos)
+ 
 });
 
 Gasto.addEventListener("click", () => {

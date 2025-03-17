@@ -38,6 +38,7 @@ Ingreso.addEventListener("click", () => {
     
 });
 
+
 async function Lista(tipo) {
     const Etiqueta = collection(Acceso, "Etiqueta");
     const ListBox = document.getElementById("ListBox");
