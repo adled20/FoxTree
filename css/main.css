@@ -102,7 +102,7 @@ width: 30%;
    border: none;
    padding-left: 70px;
    padding-right: 70px;
-    background-color: var(--morado);
+    background-color: var(--naranja);
 }
 .bot, .formu{
     width: 100%;
@@ -114,4 +114,41 @@ width: 30%;
  #borde{
    width: 100%;
    border: 5px solid var(--morado);
+ }
+
+ .links{
+    
+    text-align: center;
+    transition: .5s ease;
+    flex-grow: 1;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+ }
+
+ .links a {
+    font-size: 17px;
+    border: 5px solid #fff;
+    border-radius: 15px;
+    width: 220px;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    background-color: #fff;
+    transition: .5s ease;
+ }
+
+
+ .links  :hover{
+    background-color: var(--morado);
+    border-color: var(--morado);
+    color: #fff;
+ }
+ #Principal{
+    background-color: var(--morado);
+    border-color: var(--morado);
+    color: #fff;
  }

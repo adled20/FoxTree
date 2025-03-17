@@ -42,14 +42,15 @@
   <div class="modal-dialog modal-dialog-centered"">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">¡ERROR!</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Procesando datos</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <h3>¡PROCESANDO!</h3>
+        <h3 id="ModAlert">¡PROCESANDO!</h3>
         <div class="d-flex justify-content-center carga">
           <div id="icono" class="loader"></div>
         </div>
+        <h4 id="ERRORNAME"></h4>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">cerrar</button>

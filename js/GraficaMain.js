@@ -5,10 +5,14 @@ const UID = sessionStorage.getItem("UID")
 var tipo = "Gastos";
 
 
+
 ga.addEventListener("click", async () => {
     tipo = "Gastos";
     const datos = await EncontrarRegistro();
     DibujarGrafica(datos)
+    ga.style.transition = "background-color 0.5s ease";
+    ga.style.backgroundColor="#5e17eb";
+    Ingre.style.backgroundColor="#f1511b";
    
 });
 
@@ -17,6 +21,9 @@ Ingre.addEventListener("click", async () => {
   tipo = "Ingresos";
     const datos = await EncontrarRegistro();
     DibujarGrafica(datos)
+    Ingre.style.transition = "background-color 0.5s ease";
+    Ingre.style.backgroundColor="#5e17eb";
+    ga.style.backgroundColor="#f1511b";
  
 });
 

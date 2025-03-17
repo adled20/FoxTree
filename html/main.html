@@ -23,7 +23,21 @@
 </header>
 <div class="d-flex contenedor ms-2 me-2 mt-2">
   <aside class=" rounded d-flex flex-column lateral">
-
+      <div class="links m-2 ">
+      <a id="Principal"  href="./main.html">Principal</a>
+    </div>
+    <div class="links m-2 ">
+      <a  href="./Graficos.html">Gráficos</a>
+      </div>
+      <div class="links m-2 ">
+      <a href="./Registros.html">Registros</a>
+    </div>
+    <div class="links m-2 ">
+      <a href="./Etiquetas.html">Etiquetas</a>
+    </div>
+    <div class="links m-2 ">
+      <a href="./Simulador_de_intereses.html">Simulador de intereses</a>
+    </div>
   </aside>
   <section class="d-flex sect ms-2">
     <div id="entrar" class=" d-flex flex-column align-items-center">
@@ -88,7 +102,9 @@
     const hola = document.getElementById("Nombre");
     const UID = sessionStorage.getItem("UID")
 
-
+    if (UID==null) {
+      window.location.href="./InicioSesion.html";
+    }
     async function Econtrarnombre() {
       const Usuario = collection(Acceso, "Usuario");
       const q = query(Usuario, where("UID", "==", UID));

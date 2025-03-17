@@ -107,3 +107,36 @@ body{
     object-fit: cover;
   
 }
+
+.close.icon {
+    color: #d10e36;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 0;
+    width: 100px;
+    height: 50px;
+  }
+  
+  .close.icon:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    height: 1px;
+    background-color: currentColor;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  
+  .close.icon:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    height: 1px;
+    background-color: currentColor;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  
+  
