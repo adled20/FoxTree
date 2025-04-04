@@ -46,7 +46,7 @@ async function Lista(tipo) {
     const Eti = query(Etiqueta, where("Tipo", "==", tipo));
    
     const ListaEtiquetas = await getDocs(Eti);
-    var contador=1;
+   
     ListaEtiquetas.forEach((doc) => {
 const etiqueta=doc.data();
 const option = document.createElement("option");
@@ -54,7 +54,7 @@ option.textContent=""+etiqueta.Nombre;
 
 option.style.backgroundColor=etiqueta.Color
 ListBox.appendChild(option);
-contador = contador +1;
+
 
 });
   }

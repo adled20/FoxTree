@@ -1,0 +1,20 @@
+#Registros{
+    width: 100%;
+}
+
+.RegistrosVer{
+   
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            150px,
+            1fr
+        )
+        );
+        gap: 16px;
+}
+
+.item{
+    padding: 5px;
+}
