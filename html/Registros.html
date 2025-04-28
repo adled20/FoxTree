@@ -13,17 +13,18 @@
 <body>
 <header class="ms-2 me-2 mt-2">
 <!-- Modal -->
-<div class="modal" id="exampleModal"  tabindex="-1">
+<div class="modal fade-in" id="exampleModal"  tabindex="-1">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header modalhead">
           <h5 class="modal-title">Registro</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" id="CerrarModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="d-flex flex-column modal-body mb-2">
-          <div class="d-flex justify-content-between">
-            <div id="color" class="rounded-circle" style="width: 50px; height: 50px;"></div>
-            <div class="d-flex mb-2">
+        <div class="d-flex flex-column modal-body modalbody mb-2">
+          <input type="text" id="iddocumento" style="display: none;">
+          <div class="d-flex">
+            <div id="color" class="rounded-circle me-5" style="width: 50px; height: 50px;"></div>
+            <div class="d-flex mb-2" style="width: 350px;">
             <label for="inputPassword5" class="form-label">Seleccionar etiqueta</label>
             <select id="ListBox" class="form-select border-morado border-3" aria-label="Default select example">
               <option id="nombre" selected >Etiqueta</option>
@@ -40,11 +41,14 @@
             <label class="btn btn-outline-primary" for="Gastos">Gastos</label>
 
           </div>
-         
+          <label class="form-label mt-2">Cantidad:</label>
+          <div class="input-group mb-3">
+                     <input type="number" id="CantidadForm" class="form-control border-morado border-3" placeholder="Cantidad" aria-label="number" aria-describedby="basic-addon1">
+          </div>
           <label class="form-label">Comentarios</label>
           <div class="form-floating mb-2">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-            <label id="Comentario" for="floatingTextarea2">Comments</label>
+            <textarea class="border-3 border-morado form-control" placeholder="Leave a comment here" id="Coment" style="height: 100px"></textarea>
+            <label id="Comentario" for="Coment">Comments</label>
           </div>
           <div class="d-flex ImagenRegistro mb-2">
             <img src="" alt="" style="width: 150px; height: 150px;">
@@ -53,9 +57,8 @@
           <button class="btn btn-primary">Cambiar foto</button>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Editar</button>
-          <button type="button" class="btn btn-primary">Borrar</button>
+          <button type="button" id="Editar" class="btn btn-danger">Editar</button>
+          <button type="button" id="Borrar" class="btn btn-info">Borrar</button>
         </div>
       </div>
     </div>
@@ -91,11 +94,25 @@
   </aside>
   <section class="d-flex sect ms-2">
     <div id="Registros">
+      <div id="filtradores" class="d-flex mb-3" style="width: 50%;">
+        <p class="me-3">Tipo:</p>
+      <select id="TipoFil" class="form-select border-3 border-morado me-3" aria-label="Default select example">
+        <option selected value="">Ambos</option>
+        <option value="Gastos">Gastos
+        </option>
+        <option value="Ingresos">Ingresos</option>
+      </select>
+      <p class="me-3">Etiqueta:</p>
+      <select id="EtiFil" class="form-select border-3 border-morado me-3" aria-label="Default select example">
+        <option value="" selected>Todas</option>
+      </select>
+      <button class=" btn btn-danger" id="Filtrar">Filtrar</button>
+    </div>
         <button style="display: none;" type="button" id="EjecutarModal" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
             ver
           </button>
      
-        <div class="RegistrosVer" id="RegistrosVer">
+        <div class="RegistrosVer " id="RegistrosVer">
             
             
         </div>
@@ -110,6 +127,7 @@
   <script src="https://echarts.apache.org/en/js/vendors/echarts/dist/echarts.min.js"></script>
   <script type="module" src="../js/Registros.js"></script>
   <script type="module" src="../js/Conexion.js"></script>
+  <script type="module" src="../js/Editar&BorrarRegis.js"></script>
   <script type="module">
     import { Acceso } from "../js/Conexion.js"
     import { collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";

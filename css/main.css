@@ -10,14 +10,16 @@ nav{
     background-color: var(--negro);
 }
 .contenedor{
-    height: 100dvh;
+
+    min-height: 100vh; 
    
 }
 .lateral{
     
    width: 20%;
-   height: 100dvh;
+
    background-color: var(--negro);
+
 }
 
 .sect{
